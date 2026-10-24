@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Last Tenant — An AI Short Film</title>
+<meta name="description" content="When a greedy landlord traps an elderly tenant inside her mold-infested apartment, his cruelty unleashes a sentient fungal horror.">
+<meta property="og:title" content="The Last Tenant">
+<meta property="og:description" content="A cat, a rat, and a building that remembers.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍄</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Libre+Baskerville:ital@0;1&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="spores" aria-hidden="true"></canvas>
+<div id="lamp" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#top" class="brand">M<span>K</span></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  <nav>
+    <a href="#story">Story</a><a href="#cast">Characters</a><a href="#crew">Crew</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" data-img="assets/images/poster.png">
+    <div class="hero-text">
+      <h1 aria-label="The Last Tenant"><span class="small">The</span> <span class="split">Last Tenant</span></h1>
+      <p>A short film in a building that remembers.</p>
+      <button id="lampToggle" class="btn" aria-pressed="true">Lamp: on</button>
+    </div>
+    <span class="hint">Move your cursor — it’s dark in here.</span>
+  </section>
+
+  <section id="story" class="story">
+    <div class="wrap two">
+      <figure class="frame" data-img="assets/images/evelynlocked.png" data-tilt><figcaption>Evelyn, locked inside her apartment.</figcaption></figure>
+      <div>
+        <h2>The logline</h2>
+        <p class="lead">When a greedy landlord traps an elderly tenant inside her mold-infested apartment, his cruelty unleashes a sentient fungal horror that transforms her into a vengeful monster, forcing him to confront his sins before he becomes the building’s last tenant.</p>
+      </div>
+    </div>
+    <div class="wrap two flip">
+      <div>
+        <h2>The infestation</h2>
+        <p class="lead">Months later, a mysterious infestation spreads through the building, revealing Evelyn’s horrifying transformation. As the mold consumes everything, Walter faces the consequences of his cruelty and becomes the building’s last tenant.</p>
+      </div>
+      <figure class="frame" data-img="assets/images/molds.png" data-tilt><figcaption>Jean, in her room months later</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="gallery" aria-label="Film stills">
+    <div class="strip">
+      <figure data-img="assets/images/s1.png"></figure>
+      <figure data-img="assets/images/s2.png"></figure>
+      <figure data-img="assets/images/s3.png"></figure>
+      <figure data-img="assets/images/s4.png"></figure>
+      <figure data-img="assets/images/s5.png"></figure>
+      <figure data-img="assets/images/s6.png"></figure>
+    </div>
+  </section>
+
+  <section id="cast" class="cast">
+    <div class="wrap">
+      <h2>Who lives here</h2>
+      <p class="sub">Hover or tap a card. Evelyn changes when the lamp finds her.</p>
+      <div class="cards">
+        <article class="card" data-tilt tabindex="0">
+          <div class="portrait" data-img="assets/images/evelyn.png"></div>
+          <h3>Evelyn Vale <small>(Mrs. Cat)</small></h3>
+          <p>An elderly cat tenant with cream-colored fur, a faded floral dress, and a cardigan. Gentle and vulnerable until her abandonment leads to a monstrous transformation.</p>
+        </article>
+        <article class="card" data-tilt tabindex="0">
+          <div class="portrait" data-img="assets/images/walter.png"></div>
+          <h3>Walter Harlan</h3>
+          <p>A greedy, middle-aged rat landlord wearing a brown tweed jacket and red tie. Cold, dismissive, and obsessed with rent payments.</p>
+        </article>
+        <article class="card" data-tilt tabindex="0">
+          <div class="portrait" data-img="assets/images/jean.png"></div>
+          <h3>Jean</h3>
+          <p>A young dog tenant wearing round glasses and a green cardigan. Kind, observant, and increasingly terrified by the infestation.</p>
+        </article>
+        <article class="card mold" data-tilt tabindex="0">
+          <div class="portrait" data-img="assets/images/evelyn-mold.png"></div>
+          <h3>Evelyn <small>(the mold version)</small></h3>
+          <p>A sentient black-green fungal infestation spreading through the building. It possesses Evelyn and transforms her into a grotesque creature.</p>
+        </article>
+        <article class="card" data-tilt tabindex="0">
+          <div class="portrait" data-img="assets/images/priest.png"></div>
+          <h3>The Priest</h3>
+          <p>An anthropomorphic pig in clerical clothing, summoned by Walter to confront the supernatural infestation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="crew" class="crew">
+    <div class="wrap">
+      <h2>Meet Midnight Krunch <b class="mk">MK</b></h2>
+      <ul class="polaroids">
+        <li data-tilt><div data-img="assets/images/crew-andre.jpg"></div><strong>Andre Ladores</strong><span>Film and music director</span></li>
+        <li data-tilt><div data-img="assets/images/crew-ranica.png"></div><strong>Ranica Meralpis</strong><span>Scriptwriter</span></li>
+        <li data-tilt><div data-img="assets/images/crew-jun.jpg"></div><strong>Jun Micheal Hechanova</strong><span>Visual editor</span></li>
+        <li data-tilt><div data-img="assets/images/crew-mark.jpg"></div><strong>Mark Filoteo</strong><span>Visual editor</span></li>
+        <li data-tilt><div data-img="assets/images/crew-kathleen.png"></div><strong>Kathleen Ligsa</strong><span>Proofreader</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="powered">
+    <div class="wrap">
+      <h2>Powered by</h2>
+      <ul class="tools"><li>Google Flow · Veo 3</li><li>ChatGPT</li><li>Kling AI</li><li>Suno AI</li></ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Get in touch with us</h2>
+      <p><a href="tel:+639766412243" class="mag">Phone: +63 976 641 2243</a></p>
+      <p><a href="mailto:andreladores1934@gmail.com" class="mag">Email: andreladores1934@gmail.com</a></p>
+    </div>
+  </section>
+</main>
+<footer><p>© 2026 Midnight Brunch · The Last Tenant</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
